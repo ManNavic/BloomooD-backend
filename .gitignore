@@ -15,3 +15,6 @@ build/
 # Ignore temporary files
 temp/
 *.tmp
+
+# Ignore .rest file
+.rest

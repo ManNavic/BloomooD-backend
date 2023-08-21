@@ -1,0 +1,10 @@
+GET http://localhost:4000/users/64de6c67164419785359bc52
+
+###
+POST http://localhost:4000/users
+Content-Type: application/json
+
+{
+    "email": "Boer12@sggg.com",
+    "password": "StrongPass123!"
+}
