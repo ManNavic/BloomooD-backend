@@ -4,16 +4,17 @@ const mongoose = require('mongoose')
 const app = express()
 const port = process.env.PORT
 const mongoUri = process.env.DBURL
+const cors = require('cors')
 
-async function connect() {
-  try {
-    await mongoose.connect(mongoUri)
-    console.log('Connected to MongoDB')
-  } catch (error) {
-    console.error(error)
-  }
-}
-connect()
+mongoose.connect(mongoUri)
+const db = mongoose.connection
+db.on('error', (error) => console.error(error))
+db.once('open', () => console.log('Connected to Database'))
+app.use(express.json())
+app.use(cors())
+const userRouter = require('./routes/user')
+app.use('/users', userRouter)
+
 app.listen(port, () => {
   console.log(`Server is running on ${port} port`)
 })
