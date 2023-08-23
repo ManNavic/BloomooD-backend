@@ -13,8 +13,8 @@ db.on('error', (error) => console.error(error))
 db.once('open', () => console.log('Connected to Database'))
 app.use(express.json())
 app.use(cors())
-const userRouter = require('./routes/user')
-app.use('/users', userRouter)
+const profileRouters = require('./routes/profile')
+app.use('/profile', tokenAuth, profileRouters)
 
 app.listen(port, () => {
   console.log(`Server is running on ${port} port`)
