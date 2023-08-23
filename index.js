@@ -5,6 +5,7 @@ const app = express()
 const port = process.env.PORT
 const mongoUri = process.env.DBURL
 const cors = require('cors')
+const tokenAuth = require('./utils/tokenAuth')
 
 mongoose.connect(mongoUri)
 const db = mongoose.connection
