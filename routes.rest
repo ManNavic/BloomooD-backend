@@ -1,10 +1,21 @@
 GET http://localhost:4000/users/64de6c67164419785359bc52
 
 ###
-POST http://localhost:4000/users
+POST http://localhost:4000/register
 Content-Type: application/json
 
 {
-    "email": "Boer12@sggg.com",
+    "email": "bnbfffnb@sggg.com",
     "password": "StrongPass123!"
 }
+###
+POST http://localhost:4000/feed
+Content-Type: application/json
+
+{
+    "title": "newest",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At, alias inventore consequatur cum nulla et, reprehenderit iure numquam deserunt assumenda expedita animi aliquid eos dignissimos consectetur molestias. Cupiditate, esse provident! Reprehenderit quis quo ut provident quod",
+    "imageUrl":"https://bloomoodimg.s3.eu-north-1.amazonaws.com/Screenshot_2023-07-26_at_23.52.48-removebg-preview.png"
+}
+### 
+GET http://localhost:4000/feed
