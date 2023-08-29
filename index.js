@@ -28,6 +28,10 @@ const usersRouters = require('./routes/users')
 app.use('/users', tokenAuth, usersRouters)
 const profileRouters = require('./routes/profile')
 app.use('/profile', tokenAuth, profileRouters)
+const contactUsRouters = require('./routes/contactUs')
+app.use('/contactUs', contactUsRouters)
+const forgotPasswordRouters = require('./routes/forgotPassword')
+app.use('/forgotPassword', forgotPasswordRouters)
 
 app.listen(port, () => {
   console.log(`Server is running on ${port} port`)
