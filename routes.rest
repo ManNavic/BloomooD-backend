@@ -6,16 +6,16 @@ Content-Type: application/json
 
 {
     "email": "bnbfffnb@sggg.com",
-    "password": "StrongPass123!"
+    "password": "StrongPass123"
 }
 ###
 POST http://localhost:4000/feed
 Content-Type: application/json
 
 {
-    "title": "newest",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At, alias inventore consequatur cum nulla et, reprehenderit iure numquam deserunt assumenda expedita animi aliquid eos dignissimos consectetur molestias. Cupiditate, esse provident! Reprehenderit quis quo ut provident quod",
-    "imageUrl":"https://bloomoodimg.s3.eu-north-1.amazonaws.com/Screenshot_2023-07-26_at_23.52.48-removebg-preview.png"
+    "title": "Bloomood's Beginner Picks: Effortless Elegance for Every Home",
+    "description": "New to the world of plants? Bloomood has curated a collection of beginner-friendly plants that will grace your home with elegance and charm. These low-maintenance wonders are perfect for those taking their first steps into the green realm. Elevate your space with these easy-care companions!",
+    "imageUrl":"https://bloomoodimg.s3.eu-north-1.amazonaws.com/plant-removebg-preview.png"
 }
 ### 
 GET http://localhost:4000/feed
