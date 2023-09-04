@@ -32,7 +32,10 @@ const contactUsRouters = require('./routes/contactUs')
 app.use('/contactUs', contactUsRouters)
 const forgotPasswordRouters = require('./routes/forgotPassword')
 app.use('/forgotPassword', forgotPasswordRouters)
-
+const storeItemRouters = require('./routes/storeItem')
+app.use('/storeItem', storeItemRouters)
+// const shoppingBagRouters = require('./routes/shoppingbag')
+// app.use('/shoppingbag', shoppingBagRouters)
 app.listen(port, () => {
   console.log(`Server is running on ${port} port`)
 })

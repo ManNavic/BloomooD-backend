@@ -19,3 +19,20 @@ Content-Type: application/json
 }
 ### 
 GET http://localhost:4000/feed
+
+
+###
+POST http://localhost:4000/storeItem
+Content-Type: application/json
+
+{
+    "name": "Kalanchoe",
+    "latinName":"Kalanchoe spp.",
+    "description": "Kalanchoes are succulents with vibrant flowers and fleshy leaves. They thrive in bright light conditions.",
+    "price":15.95,
+    "imageUrl":"https://bloomoodimg.s3.eu-north-1.amazonaws.com/storeItems/Kalanchoe-fotor-bg-remover-20230830131830.png",
+    "category": "bright-light"
+}
+###
+GET http://localhost:4000/storeItem?category=bumblebee
+Content-Type: application/json
